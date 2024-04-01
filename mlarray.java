@@ -1,26 +1,41 @@
 public class mlarray {
+    static int[] marks = new int[5]; // declare marks array as static so it can be accessed in static methods
+
     public static void main(String[] args) {
-        int marks[] = new int[5];
+        //mlarry();
+        //printmarks();
+        //sumofmarks();
+        //checkvalue();
+        //Multidimensional();
+       // entervalue();
+        startdesign();
+    }
+
+    public static void mlarry() {
         marks[0] = 5;
         marks[1] = 10;
         marks[2] = 20;
         marks[3] = 50;
         marks[4] = 100;
+    }
 
-        // Printing marks array
+    public static void printmarks() 
+    {
         System.out.println("Marks array:");
         for (int i = 0; i < marks.length; i++) {
             System.out.println(marks[i]);
         }
+    }
 
-        // sum of marks
+    public static void sumofmarks() {
         int sum = 0;
         for (int i = 0; i < marks.length; i++) {
             sum += marks[i];
         }
         System.out.println("Sum of marks: " + sum);
+    }
 
-        // check value in the array
+    public static void checkvalue() {
         int c = 20;
         boolean found = false; // Define found variable outside the loop
         for (int i = 0; i < marks.length; i++) {
@@ -30,13 +45,14 @@ public class mlarray {
                 break;
             }
         }
-
         if (found) { // Check if found is true
             System.out.println("The value of c is in the array");
         } else {
             System.out.println("The value of c is not in the array");
         }
+    }
 
+    public static void Multidimensional() {
         // Multidimensional array
         int bin[][] = new int[3][3];
         bin[0][0] = 5;
@@ -65,4 +81,42 @@ public class mlarray {
             }
         }
     }
+    public static void entervalue()
+    {
+        int[][] a = new int[5][2];
+
+        for(int i=0;i<5;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                a[i][j]+=1;
+            }
+        }
+
+            for (int i=0;i<5;i++)
+            {
+                for(int j=0;j<2;j++)
+                {
+                    System.out.println(a[i][j]);
+                }
+            }
+        
+    }
+
+    public static void startdesign()
+    {
+        String a= "*";
+        for(int i=0;i<10;i++)
+        {
+            for(int j=0;j<i;j++)
+            {
+                System.out.print(a);
+            }
+            System.out.println();
+        }
+
+    }
+
+    
+
 }
